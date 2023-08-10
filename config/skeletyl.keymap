@@ -40,34 +40,29 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <240>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings =
                 <&kp>,
                 <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
         };
-        hs: homerow_shifts {
+        ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS";
+            label = "LTQ";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             bindings =
-                <&kp>,
+                <&mo>,
                 <&kp>;
-        };
-        td: tapdance {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
         };
     };
 
@@ -76,19 +71,19 @@
 
         default_layer {
             bindings = <
-       &kp Q            &kp W             &kp E            &kp R     &kp T      &kp Y             &kp U      &kp I       &kp O             &kp P
- &hm LCTRL A            &kp S             &kp D            &kp F     &kp G      &kp H             &kp J      &kp K       &kp L    &hm RCTRL SEMI
-&hs LSHIFT Z            &kp X             &kp C            &kp V     &kp B      &kp N             &kp M  &kp COMMA  &kp PERIOD  &hs RSHIFT SLASH
-              &kp BSPC         &lt 1 DEL         &kp LALT         &kp RALT  &lt 2 RET  &kp SPACE
+         &kp Q                        &kp W                     &kp E                       &kp R     &kp T  &kp Y                                &kp U        &kp I            &kp O               &kp P
+&hm LEFT_GUI A               &hm LEFT_ALT S               &hm LCTRL D            &hm LEFT_SHIFT F     &kp G  &kp H                    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+         &kp Z                        &kp X                     &kp C                       &kp V     &kp B  &kp N                                &kp M    &kp COMMA       &kp PERIOD            &kp FSLH
+                &lt 1 SPACE                  &lt 2 ENTER               &kp LALT                    &kp RALT  &mo 3  &ltq 2 BACKSPACE
             >;
         };
 
         lower_layer {
             bindings = <
-&kp N1              &kp N2              &kp N3              &kp N4     &kp N5     &kp N6            &kp N7    &kp N8     &kp N9           &kp N0
-&trans              &trans              &trans              &trans  &kp PSCRN   &kp LEFT          &kp DOWN    &kp UP  &kp RIGHT          &kp SQT
-&trans          &kp C_PREV          &kp C_NEXT            &kp LEFT  &kp RIGHT  &kp MINUS          &kp PLUS  &kp LBKT   &kp RBKT  &hs RSHIFT BSLH
-        &trans              &trans              &kp LGUI               &trans     &trans  &trans
+&kp N1          &kp N2          &kp N3          &kp N4  &kp N5     &kp N6             &kp N7     &kp N8  &kp N9   &kp N0
+&trans          &trans          &trans          &trans  &trans  &kp MINUS          &kp EQUAL  &kp GRAVE  &trans  &kp SQT
+&trans          &trans          &trans          &trans  &trans     &trans             &trans     &trans  &trans   &trans
+        &trans          &trans          &trans          &trans  &kp RSHFT  &trans
             >;
         };
 
