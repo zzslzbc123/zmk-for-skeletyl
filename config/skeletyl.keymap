@@ -19,22 +19,55 @@
 };
 
 / {
-    combos {
+	    combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        left_bkt {
+            bindings = <&kp LBKT>;
+            key-positions = <3 2>;
             timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
         };
 
-        combo_tab {
+        right_bkt {
+            bindings = <&kp RBKT>;
+            key-positions = <6 7>;
             timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp TAB>;
+        };
+
+        left_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <12 13>;
+            timeout-ms = <50>;
+        };
+
+        right_par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <16 17>;
+            timeout-ms = <50>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <23 22>;
+            timeout-ms = <50>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <26 27>;
+            timeout-ms = <50>;
+        };
+
+        bac {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <4 5>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <14 15>;
         };
     };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -86,25 +119,22 @@
         &trans          &trans          &trans          &trans  &kp RSHFT  &trans
             >;
         };
-
-        raise_layer {
+		  raise_layer {
             bindings = <
- &kp F1           &kp F2          &kp F3             &kp F4    &kp F5     &kp F6               &kp F7        &kp F8        &kp F9       &kp F10
-&kp F11          &kp F12          &trans          &kp GRAVE  &kp AMPS  &kp EQUAL           &kp LS(N9)    &kp LS(N0)  &kp RA(LBKT)  &kp RA(RBKT)
- &trans           &trans          &trans             &trans    &trans  &kp MINUS          &kp RA(SQT)  &kp RA(BSLH)      &kp BSLH  &kp LS(BSLH)
-         &trans           &trans          &trans               &trans     &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
             >;
-        };
-
+        };		
         adjust_layer {
             bindings = <
-    &kp F1              &kp F2              &kp F3          &kp F4  &kp F5  &kp F6          &kp F7  &kp F8  &kp F9  &kp F10
-   &kp F11             &kp F12              &trans          &trans  &trans  &trans          &trans  &trans  &trans   &trans
-&bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &trans  &trans  &trans          &trans  &trans  &trans   &trans
-            &trans              &trans              &trans          &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans  &trans  &trans
             >;
         };
-
         layer_4 {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
