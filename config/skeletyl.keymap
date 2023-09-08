@@ -78,7 +78,7 @@
             quick-tap-ms = <180>;
             global-quick-tap;
         };
-       ltq: ltq {
+        ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
             bindings =
@@ -97,10 +97,10 @@
 
         default_layer {
             bindings = <
-&kp Q                        &kp W                        &kp E                 &kp R             &kp T             &kp Y                 &kp U              &kp I        &kp O            &kp P
-&hm LEFT_GUI A               &hm LEFT_ALT S               &hm LCTRL D           &hm LEFT_SHIFT F  &kp G             &kp H                 &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
-&kp Z                        &kp X                        &kp C                 &kp V             &kp B             &kp N                 &kp M              &kp COMMA    &kp PERIOD       &kp FSLH
-                &lt 1 SPACE                  &lt 2 ENTER               &kp TAB                    &ltq 2 BACKSPACE  &mo 2  &kp BACKSPACE
+&kp Q                        &kp W                        &kp E                 &kp R             &kp T          &kp Y                    &kp U              &kp I        &kp O            &kp P
+&hm LEFT_GUI A               &hm LEFT_ALT S               &hm LCTRL D           &hm LEFT_SHIFT F  &kp G          &kp H                    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+&kp Z                        &kp X                        &kp C                 &kp V             &kp B          &kp N                    &kp M              &kp COMMA    &kp PERIOD       &kp FSLH
+                &lt 1 SPACE                  &lt 2 ENTER               &kp TAB                    &kp RIGHT_ALT  &mo 3  &ltq 2 BACKSPACE
             >;
         };
 
