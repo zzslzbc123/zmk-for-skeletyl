@@ -97,10 +97,10 @@
 
         default_layer {
             bindings = <
-&kp Q                    &kp W                        &kp E                     &kp R             &kp T  &kp Y                    &kp U              &kp I        &kp O            &kp P
-&hm LEFT_GUI A           &hm LEFT_ALT S               &hm LCTRL D               &hm LEFT_SHIFT F  &kp G  &kp H                    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
-&kp Z                    &kp X                        &kp C                     &kp V             &kp B  &kp N                    &kp M              &kp COMMA    &kp PERIOD       &kp FSLH
-                &kp TAB                  &lt 1 SPACE               &lt 2 ENTER                    &mo 3  &ltq 2 BACKSPACE  &mo 4
+&kp Q                        &kp W                        &kp E                 &kp R             &kp T  &kp Y                    &kp U              &kp I        &kp O            &kp P
+&hm LEFT_GUI A               &hm LEFT_ALT S               &hm LCTRL D           &hm LEFT_SHIFT F  &kp G  &kp H                    &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+&kp Z                        &kp X                        &kp C                 &kp V             &kp B  &kp N                    &kp M              &kp COMMA    &kp PERIOD       &kp FSLH
+                &lt 1 SPACE                  &lt 1 ENTER               &kp TAB                    &mo 4  &mo 3  &ltq 2 BACKSPACE
             >;
         };
 
@@ -115,10 +115,10 @@
 
         raise_layer {
             bindings = <
-&kp ESC             &kp KP_NUMBER_7          &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans          &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans
-&kp CAPS            &kp KP_NUMBER_4          &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp AT           &trans          &kp LEFT     &kp DOWN      &kp RIGHT      &trans
-&kp DELETE          &kp KP_NUMBER_1          &kp KP_NUMBER_2          &kp KP_NUMBER_3  &kp DOT          &trans          &trans       &trans        &trans         &trans
-            &trans                   &trans                   &trans                   &trans           &trans  &trans
+&kp ESC             &kp KP_NUMBER_7          &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans            &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans
+&kp CAPS            &kp KP_NUMBER_4          &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp AT           &kp HOME          &kp LEFT     &kp DOWN      &kp RIGHT      &trans
+&kp DELETE          &kp KP_NUMBER_1          &kp KP_NUMBER_2          &kp KP_NUMBER_3  &kp DOT          &kp END           &trans       &trans        &trans         &trans
+            &trans                   &trans                   &trans                   &trans           &trans    &trans
             >;
         };
 
@@ -150,15 +150,6 @@
         };
 
         layer_6 {
-            bindings = <
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-        &trans          &trans          &trans          &trans  &trans  &trans
-            >;
-        };
-
-        layer_7 {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
